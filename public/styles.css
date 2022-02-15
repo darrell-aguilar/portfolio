@@ -1,0 +1,45 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    top: 0;
+    transition: top 0.3s;
+}
+
+#button {
+    margin-bottom: 20px;
+}
+
+#burger-menu:active > div, #burger-menu:hover > div {
+    background-color: #06b6d4;
+}
+
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    width: 7rem;
+    background-color: rgb(27, 200, 206);
+    color: black;
+    padding: 0.2rem 0.2rem;
+    top: -25%;
+    left: 50%;
+    margin-left: -3.5rem;
+    border-radius: 6px;
+    z-index: 2;
+  }
+
+.tooltip::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(27, 200, 206) transparent transparent transparent;
+  }
+
+.logo:hover .tooltip {
+    visibility: visible;
+}
