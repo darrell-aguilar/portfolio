@@ -35,3 +35,7 @@ function scrollToId(value) {
 $("#burger-menu").on("click", () => {
         $(".nav-items").toggle("slow")
 })
+
+$(".animate-text").css({"opacity":"0.0","visibility":"visible"}).animate({opacity: 1}, 800)
+
+
