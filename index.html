@@ -16,10 +16,10 @@
 <body class="h-full bg-neutral-800 text-white text-center" id="Body">
     <div class="mx-4">
         <nav class="navbar h-20 w-full sticky z-50 bg-neutral-800">
-            <div class="space-y-2 py-8 md:hidden block" id="burger-menu">
+            <div class="py-8 md:hidden block bg-neutral-800" id="burger-menu">
+                <div class="mb-2 w-8 h-0.5 bg-white"></div>
                 <div class="w-8 h-0.5 bg-white"></div>
-                <div class="w-8 h-0.5 bg-white"></div>
-                <div class="w-8 h-0.5 bg-white"></div>
+                <div class="mt-2 w-8 h-0.5 bg-white"></div>
             </div>
             <ul class="nav-items md:flex-row flex-col md:flex hidden justify-end space-x-8:md py-4 bg-neutral-800 border-b-4 md:border-0">
                 <li class="hover:bg-cyan-500 hover:text-black px-4 py-2"><button onclick="scrollToId(this)" name="Body">Home</button></li>
@@ -39,59 +39,59 @@
                 About Me</h1>
             <p class="w-4/6 m-auto md:text-left text-center">An IT Administrator looking to transition to web development as a Front End Developer. Have started learning about Javascript in mid 2021 and have transitioned to Front End Frameworks such as ReactJS</p>
             <h2 class="py-8">Technologies I have used</h2>
-            <div class="about-me-container lg:w-1/2 w-full m-auto grid gap-4 grid-cols-1 sm:grid-cols-3 ">
-                <div class="m-auto w-40">
-                    <div class="w-40 py-4 logo relative">
+            <div class="about-me-container lg:w-1/2 w-full m-auto grid gap-4 grid-cols-2 sm:grid-cols-3 ">
+                <div class="m-auto sm:w-40 w-28">
+                    <div class="sm:w-40 w-28 py-4 logo relative">
                         <div class="tooltip">HTML</div>
                         <img src="images/HTML.png" alt="HTML" class="w-20 m-auto">
                     </div>
                 </div>
-                <div class="m-auto w-40">
-                    <div class="w-40 py-4 logo relative">
+                <div class="m-auto sm:w-40 w-28">
+                    <div class="sm:w-40 w-28 py-4 logo relative">
                         <div class="tooltip">CSS</div>
                         <img src="images/CSS.svg" alt="CSS" class="w-20 m-auto">
                     </div>
                 </div>
-                <div class="m-auto w-40">
-                    <div class="w-40 py-4 logo relative">
+                <div class="m-auto sm:w-40 w-28">
+                    <div class="sm:w-40 w-28 py-4 logo relative">
                         <div class="tooltip">Javascript</div>
-                        <img src="images/JS.png" alt="JS" class="w-36 m-auto">
+                        <img src="images/JS.png" alt="JS" class="w-20 m-auto">
                     </div>
                 </div>
-                <div class="m-auto w-40">
-                    <div class="w-40 py-4 logo relative">
+                <div class="m-auto sm:w-40 w-28">
+                    <div class="sm:w-40 w-28 py-4 logo relative">
                         <div class="tooltip">React</div>
                         <img src="images/React.png" alt="React" class="w-24 m-auto">
                     </div>
                 </div>
-                <div class="m-auto w-40">
-                    <div class="w-40 py-4 logo relative">
+                <div class="m-auto sm:w-40 w-28">
+                    <div class="sm:w-40 w-28 py-4 logo relative">
                         <div class="tooltip">Redux</div>
                         <img src="images/Redux.png" alt="Redux" class="w-20 m-auto">
                     </div>
                 </div>
-                <div class="m-auto w-40">
-                    <div class="w-40 py-4 logo relative">
+                <div class="m-auto sm:w-40 w-28">
+                    <div class="sm:w-40 w-28 py-4 logo relative">
                         <div class="tooltip">Bootstrap</div>
                         <img src="images/Bootstrap.png" alt="Bootstrap" class="w-24 m-auto">
                     </div>
                 </div>
-                <div class="m-auto w-40">
-                    <div class="w-40 py-4 logo relative">
+                <div class="m-auto sm:w-40 w-28">
+                    <div class="sm:w-40 w-28 py-4 logo relative">
                         <div class="tooltip">Tailwind</div>
-                        <img src="images/Tailwind.png" alt="Tailwind" class="w-32 m-auto">
+                        <img src="images/Tailwind.png" alt="Tailwind" class="w-24 m-auto">
                     </div>
                 </div>
-                <div class="m-auto w-40">
-                    <div class="w-40 py-4 logo relative">
+                <div class="m-auto sm:w-40 w-28">
+                    <div class="sm:w-40 w-28 py-4 logo relative">
                         <div class="tooltip">MongoDB</div>
                         <img src="images/MongoDB.png" alt="MongoDB" class="w-20 m-auto">
                     </div>
                 </div>
-                <div class="m-auto w-40">
-                    <div class="w-40 py-4 logo relative">
+                <div class="m-auto sm:w-40 w-28">
+                    <div class="sm:w-40 w-28 py-4 logo relative">
                         <div class="tooltip">NodeJS</div>
-                        <img src="images/NodeJS.png" alt="NodeJS" class="w-28 m-auto">
+                        <img src="images/NodeJS.png" alt="NodeJS" class="w-24 m-auto">
                     </div>
                 </div>
             </div>
@@ -110,7 +110,7 @@
                         <button class="bg-cyan-500 md:px-4 py-2 md:w-full w-3/4 m-auto my-1"><a href="https://github.com/darrell404/pokemonDB" target="_blank">Source Code <i class="bi bi-github pl-2 text-black"></i></a></button>
                         <button class="bg-cyan-500 md:px-4 py-2 md:w-full w-3/4 m-auto my-1"><a href="https://pokemondb.duckdns.org" target="_blank">Live Website <i class="bi bi-globe pl-2 text-black"></i></a></button>
                     </div>
-                    <p class="text-black py-2 w-3/4 m-auto">A React project using the PoKemon API which allows the user to view, search and filter PoKemon</p>
+                    <p class="text-black py-2 w-3/4 m-auto">A <span class="font-bold">React-Redux</span> project using the PoKemon API which allows the user to view, search and filter PoKemon</p>
                 </div>
                 <div class="project bg-white">
                     <h2 class="text-2xl font-bold py-4 text-black">Cook Book</h2>
@@ -143,7 +143,7 @@
                         <button class="bg-cyan-500 md:px-4 py-2 md:w-full w-3/4 m-auto my-1"><a href="https://github.com/darrell404/xbox-website" target="_blank">Source Code <i class="bi bi-github pl-2 text-black"></i></a></button>
                         <button class="bg-cyan-500 md:px-4 py-2 md:w-full w-3/4 m-auto my-1"><a href="https://darrell404.github.io/xbox-website/" target="_blank">Live Website <i class="bi bi-globe pl-2 text-black"></i></a></button>
                     </div>
-                    <p class="text-black py-2 w-3/4 m-auto">A Single Page landing page site using HTML, CSS and Javascript</p>
+                    <p class="text-black py-2 w-3/4 m-auto">A Single Page clone site using HTML, CSS and Javascript</p>
                 </div>
             </div>
         </section>
