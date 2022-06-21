@@ -6,6 +6,7 @@
 .navbar {
     top: 0;
     transition: top 0.3s;
+    overflow-x: visible;
 }
 
 #button {
