@@ -1,5 +1,6 @@
 * {
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -16,35 +17,15 @@
 }
 
 .tooltip {
-    visibility: hidden;
-    position: absolute;
-    width: 7rem;
-    background-color: rgb(27, 200, 206);
-    color: black;
-    padding: 0.2rem 0.2rem;
-    top: -25%;
-    left: 50%;
-    margin-left: -3.5rem;
-    border-radius: 6px;
-    z-index: 2;
-  }
-
-.tooltip::after {
-    content: " ";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: rgb(27, 200, 206) transparent transparent transparent;
-  }
-
-.logo:hover .tooltip {
-    visibility: visible;
+    padding: 1rem 0;
 }
 
-.fade-in, .fade-in-project {
+.icon:hover {
+    transition: transform 300ms ease-in-out;
+    transform: scale(1.2);
+}
+
+.fade-in {
     opacity: 0;
     transition: opacity 500ms ease-in;
 }
@@ -53,22 +34,24 @@
     opacity: 1;
 }
 
-.from-left {
-    transform: translateX(-30%);
+.from-right {
+    transform: translate(30%);
 }
 
-.from-right {
-    transform: translateX(30%);
+.from-left {
+    transform: translate(-30%);
 }
 
 .from-left, .from-right {
-    transition: transform 500ms ease-in ,
-    opacity 200ms ease-in;
     opacity: 0;
+}
+
+.from-left, .from-right {
+    transition: opacity 1000ms ease-in, transform 500ms ease-in;
 }
 
 .from-left.appear,
 .from-right.appear {
-    transform: translateX(0);
     opacity: 1;
-}
+    transform: translate(0);
+} 
