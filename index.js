@@ -4,7 +4,7 @@ var lastTop = 0;
 function scrollDetect(){
     var newTop = $(this).scrollTop();
 // Check if screen is on mobile device, to autohide nav bar items on scroll
-    if($(window).width() < 768) {
+    if($(window).width() < 648) {
         $(".nav-items").css("display", "none")
     }
 //     Scrolling down
@@ -14,7 +14,7 @@ function scrollDetect(){
 //     Scrolling up
     else {
             $(".navbar").css("top","0")
-            if ($(window).width() > 768) {
+            if ($(window).width() > 648) {
                     $(".nav-items").css("display", "flex")
             }
     }

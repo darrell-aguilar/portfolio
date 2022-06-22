@@ -1,12 +1,11 @@
 * {
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
+    --main-cyan: #06b6d4;
 }
 
 .navbar {
     top: 0;
     transition: top 0.3s;
-    overflow-x: visible;
 }
 
 #button {
@@ -26,9 +25,14 @@
     transform: scale(1.2);
 }
 
+.project {
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 60%), -2px -2px 6px rgb(255 255 255 / 20%);
+    border-radius: 5px;
+}
+
 .fade-in {
     opacity: 0;
-    transition: opacity 500ms ease-in;
+    transition: opacity 400ms ease-in;
 }
 
 .fade-in.appear, .fade-in-project.appear {
@@ -36,11 +40,11 @@
 }
 
 .from-right {
-    transform: translate(30%);
+    transform: translate3d(100px, 0, 0);
 }
 
 .from-left {
-    transform: translate(-30%);
+    transform: translate3d(-100px, 0 ,0);
 }
 
 .from-left, .from-right {
@@ -55,4 +59,4 @@
 .from-right.appear {
     opacity: 1;
     transform: translate(0);
-} 
+}
