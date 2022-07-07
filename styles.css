@@ -55,8 +55,22 @@
     transition: opacity 1000ms ease-in, transform 500ms ease-in;
 }
 
+#home-image {
+    animation: 1s ease-in showImage;
+}
+
 .from-left.appear,
 .from-right.appear {
     opacity: 1;
     transform: translate(0);
+}
+
+@keyframes showImage {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
