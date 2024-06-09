@@ -28,7 +28,6 @@ function scrollDetect() {
 // This function scrolls to the sections on the page on click
 
 function scrollToId(value) {
-  toggleBurgerMenu()
   var item = `#${$(value).attr("name")}`
   var scrollTo = $(item).offset().top
   $("html, body").animate(
@@ -38,22 +37,6 @@ function scrollToId(value) {
     800
   )
 }
-
-function toggleBurgerMenu() {
-  let burgerMenuIcon = $("#burger-menu-icon")
-  if (burgerMenuIcon[0].className.includes("bi-list")) {
-    burgerMenuIcon.removeClass("bi-list")
-    burgerMenuIcon.addClass("bi-x")
-  } else {
-    burgerMenuIcon.removeClass("bi-x")
-    burgerMenuIcon.addClass("bi-list")
-  }
-}
-
-$("#burger-menu").on("click", () => {
-  toggleBurgerMenu()
-  $(".nav-items").toggle()
-})
 
 $(".animate-text")
   .css({ opacity: "0.0", visibility: "visible" })
@@ -73,6 +56,13 @@ function intersectionObserverWrapper(options) {
       }
     })
   }, options)
+}
+
+const toggleBurgerMenu = () => {
+  const nav = document.querySelector(".nav-items")
+  if (nav.classList.contains("hidden")) {
+    nav.classList.remove("hidden")
+  } else nav.classList.add("hidden")
 }
 
 const appearOptionsLogo = {
