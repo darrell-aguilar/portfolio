@@ -1,3 +1,7 @@
+$(".animate-text")
+  .css({ opacity: "0.0", visibility: "visible" })
+  .animate({ opacity: 1 }, 800)
+
 $(window).on("scroll", scrollDetect)
 
 function isMobile() {
@@ -9,7 +13,7 @@ function scrollDetect() {
   var newTop = $(this).scrollTop()
   // Check if screen is on mobile device, to autohide nav bar items on scroll
   if (isMobile()) {
-    $(".nav-items").css("display", "none")
+    hideMenu()
   }
   //     Scrolling down
   if (newTop > lastTop) {
@@ -38,10 +42,6 @@ function scrollToId(value) {
   )
 }
 
-$(".animate-text")
-  .css({ opacity: "0.0", visibility: "visible" })
-  .animate({ opacity: 1 }, 800)
-
 const faderItemsLogo = document.querySelectorAll(".fade-in")
 const faderItemsProject = document.querySelectorAll(".fade-in-project")
 
@@ -62,7 +62,12 @@ const toggleBurgerMenu = () => {
   const nav = document.querySelector(".nav-items")
   if (nav.classList.contains("hidden")) {
     nav.classList.remove("hidden")
-  } else nav.classList.add("hidden")
+  } else hideMenu()
+}
+
+const hideMenu = () => {
+  const nav = document.querySelector(".nav-items")
+  nav.classList.add("hidden")
 }
 
 const appearOptionsLogo = {
