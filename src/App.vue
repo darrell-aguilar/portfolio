@@ -27,8 +27,13 @@ export default defineComponent({
 .app {
   &_toggle {
     position: absolute;
+
     right: 1rem;
     top: 1rem;
+    @include md {
+      right: 5rem;
+      top: 2rem;
+    }
   }
   &_container {
     padding: 2rem 1rem;
