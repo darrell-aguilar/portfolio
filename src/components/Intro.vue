@@ -1,22 +1,24 @@
 <template>
   <header class="intro">
-    <div class="intro_content">
-      <h1 class="intro_title">
-        <a href="/">Darrell Aguilar</a>
-      </h1>
-      <h2 class="intro_subtitle">Front End Engineer</h2>
-      <p class="intro_text">Converting design to code.</p>
-    </div>
-    <div class="intro_links">
-      <a href="https://linkedin.com/in/darrell-aguilar">
-        <i class="intro_icon fa-brands fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/darrell-aguilar">
-        <i class="intro_icon fa-brands fa-github"></i>
-      </a>
-      <a href="mailto:darrell029@gmail.com">
-        <i class="intro_icon fa-solid fa-envelope"></i>
-      </a>
+    <div class="intro_container">
+      <div class="intro_content">
+        <h1 class="intro_title">
+          <a href="/">Darrell Aguilar</a>
+        </h1>
+        <h2 class="intro_subtitle">Front End Engineer</h2>
+        <p class="intro_text">Converting design to code.</p>
+      </div>
+      <div class="intro_links">
+        <a href="https://linkedin.com/in/darrell-aguilar">
+          <i class="intro_icon fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/darrell-aguilar">
+          <i class="intro_icon fa-brands fa-github"></i>
+        </a>
+        <a href="mailto:darrell029@gmail.com">
+          <i class="intro_icon fa-solid fa-envelope"></i>
+        </a>
+      </div>
     </div>
   </header>
 </template>
@@ -31,7 +33,13 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .intro {
-  position: relative;
+  &_container {
+    @include lg {
+      position: sticky;
+    }
+    position: static;
+    top: 2rem;
+  }
 
   &_content {
     animation: fade-in 0.5s ease-in-out;

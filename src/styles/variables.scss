@@ -1,3 +1,5 @@
+// breakpoints
+
 $small: "640px";
 $medium: "768px";
 $large: "1024px";
@@ -30,3 +32,20 @@ $x-large: "1280px";
 // colours
 
 $lime-green: #a7ff49;
+
+// mixins
+
+@mixin fade-in-content {
+  animation: fade-in 1s ease-in-out;
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

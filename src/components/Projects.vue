@@ -1,34 +1,36 @@
 <template>
-  <div class="experience">
-    <h1 class="experience_header">Experience</h1>
+  <div class="projects">
+    <h1 class="projects_header">Projects</h1>
     <Card
-      v-for="exp in experience"
-      :key="exp.company"
-      v-bind:content="exp"
+      v-for="proj in projects"
+      :key="proj.title"
+      :imageContent="proj"
+      type="card-image"
     ></Card>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue"
-import content from "../assets/experience.json"
+import content from "../assets/projects.json"
 import Card from "./Card.vue"
+import { ICardImageProps } from "../helpers/types"
 
 export default defineComponent({
-  name: "Experience",
+  name: "Projects",
   components: {
     Card,
   },
   data() {
     return {
-      experience: content.experience,
+      projects: content.projects as ICardImageProps[],
     }
   },
 })
 </script>
 
 <style scoped lang="scss">
-.experience {
+.projects {
   @include fade-in-content;
 
   padding-top: 3rem;

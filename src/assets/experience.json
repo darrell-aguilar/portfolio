@@ -3,23 +3,16 @@
     {
       "company": "So Energy",
       "role": "Front End Developer",
-      "fromDate": "September 2022",
+      "fromDate": "Sep 2022",
       "toDate": "Present",
-      "highlights": [
-        "Worked on multiple front end repositories/code bases, implementing new features and fixing known bugs on customer facing websites and back office applications",
-        "Reworked our Smart Meter Booking Portal to improve user experience and improve conversion which increased by 75%.",
-        "Implemented authentication on our Solar Panel website to simplify quote journey for customers"
-      ]
+      "highlights": "Worked in a variety of cross functional teams among multiple repositories/code bases, implementing new features and fixing known bugs on customer facing websites and back office applications. Reworked our Smart Meter Booking Portal to improve user experience and improve conversion which increased by 75%."
     },
     {
       "company": "Precision Proco",
       "role": "IT Administrator",
-      "fromDate": "August 2021",
-      "toDate": "September 2022",
-      "highlights": [
-        "Created a React Dashboard which connects to HP Siteflow API and allows users to view and manage printing devices. This was created to improve on searchability of devices since Siteflow's own dashboard takes a lot of time to navigate due to pagination and was championed by the IT team to manage 200+ devices",
-        "Wrote bash and Powershell scripts to automate tasks on Linux and Windows devices used within the Production line"
-      ]
+      "fromDate": "Aug 2021",
+      "toDate": "Sep 2022",
+      "highlights": "Created a React Dashboard which connects to HP Siteflow API and allows users to view and manage printing devices. This was created to improve on searchability of devices since Siteflow's own dashboard takes a lot of time to navigate due to pagination and was championed by the IT team to manage 200+ devices. Wrote bash and Powershell scripts to automate tasks on Linux and Windows devices used within the Production line"
     }
   ]
 }

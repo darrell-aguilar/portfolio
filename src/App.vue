@@ -3,7 +3,11 @@
     <Toggle class="app_toggle" />
     <div class="app_container">
       <Intro />
-      <About />
+      <div>
+        <About />
+        <Experience />
+        <Projects />
+      </div>
     </div>
   </div>
 </template>
@@ -13,12 +17,16 @@ import { defineComponent } from "vue"
 import Intro from "@/components/Intro.vue"
 import About from "@/components/About.vue"
 import Toggle from "@/components/Toggle.vue"
+import Experience from "@/components/Experience.vue"
+import Projects from "@/components/Projects.vue"
 
 export default defineComponent({
   components: {
     Intro,
     About,
     Toggle,
+    Experience,
+    Projects,
   },
 })
 </script>
@@ -37,6 +45,8 @@ export default defineComponent({
   }
   &_container {
     padding: 2rem 1rem;
+    margin: auto;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
 
@@ -50,7 +60,7 @@ export default defineComponent({
 
     @include lg {
       flex-direction: row;
-      padding: 2rem 6rem;
+      padding: 4rem 4rem;
     }
   }
 }
