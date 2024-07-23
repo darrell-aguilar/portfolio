@@ -4,8 +4,8 @@
     <Card
       v-for="proj in projects"
       :key="proj.title"
-      :imageContent="proj"
-      type="card-image"
+      :content="proj"
+      type="image"
     ></Card>
   </div>
 </template>

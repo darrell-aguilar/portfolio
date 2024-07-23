@@ -14,3 +14,7 @@ export interface ICardImageProps {
   technologies: Array<string>
   info: string
 }
+
+export type IGenericCardProps = ICardImageProps | ICardProps
+
+export type ICardTypes = "card" | "image"

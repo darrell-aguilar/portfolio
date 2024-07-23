@@ -3,45 +3,48 @@
     <template v-if="type === 'card'">
       <div class="card_header">
         <p>
-          {{ content.fromDate.toUpperCase() }} -
-          {{ content.toDate.toUpperCase() }}
+          {{ (content as ICardProps).fromDate.toUpperCase() }} -
+          {{ (content as ICardProps).toDate.toUpperCase() }}
         </p>
       </div>
       <div class="card_content">
-        <h3 class="card_role">{{ content.role }}</h3>
-        <h5 class="card_company">{{ content.company }}</h5>
+        <h3 class="card_role">{{ (content as ICardProps).role }}</h3>
+        <h5 class="card_company">{{ (content as ICardProps).company }}</h5>
         <p class="card_info">
-          {{ content.highlights }}
+          {{ (content as ICardProps).highlights }}
         </p>
       </div>
     </template>
-    <template v-if="type === 'card-image'">
+    <template v-if="type === 'image'">
       <div class="card_image">
-        <img :src="imageContent.image" />
+        <img :src="(content as ICardImageProps).image" />
       </div>
       <div class="card_content">
-        <h3 class="card_title">{{ imageContent.title }}</h3>
+        <h3 class="card_title">{{ (content as ICardImageProps).title }}</h3>
         <p class="card_info">
-          {{ imageContent.info }}
+          {{ (content as ICardImageProps).info }}
         </p>
         <div class="card_technology">
-          <p class="card_tech" v-for="tech in imageContent.technologies">
+          <p
+            class="card_tech"
+            v-for="tech in (content as ICardImageProps).technologies"
+          >
             {{ tech }}
           </p>
         </div>
         <div class="card_links">
           <a
             class="card_link"
-            v-if="imageContent.source_code"
-            :href="imageContent.source_code"
+            v-if="(content as ICardImageProps).source_code"
+            :href="(content as ICardImageProps).source_code"
             target="_blank"
           >
             Source Code
           </a>
           <a
             class="card_link"
-            v-if="imageContent.url"
-            :href="imageContent.url"
+            v-if="(content as ICardImageProps).url"
+            :href="(content as ICardImageProps).url"
             target="_blank"
           >
             Live Website
@@ -54,30 +57,28 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue"
-import { ICardImageProps, ICardProps } from "../helpers/types"
+import {
+  IGenericCardProps,
+  ICardProps,
+  ICardImageProps,
+  ICardTypes,
+} from "../helpers/types"
 
 export default defineComponent({
   name: "Card",
   props: {
     content: {
-      type: Object as PropType<ICardProps>,
-      default: {},
-    },
-    imageContent: {
-      type: Object as PropType<ICardImageProps>,
+      type: Object as PropType<IGenericCardProps>,
       default: {},
     },
     type: {
-      type: String,
-      default: "card",
+      type: String as PropType<ICardTypes>,
+      required: true,
     },
   },
   computed: {
     hasContent() {
-      return (
-        Object.keys(this.content).length > 0 ||
-        Object.keys(this.imageContent).length > 0
-      )
+      return Object.keys(this.content).length > 0
     },
   },
 })

@@ -4,7 +4,8 @@
     <Card
       v-for="exp in experience"
       :key="exp.company"
-      v-bind:content="exp"
+      :content="exp"
+      type="card"
     ></Card>
   </div>
 </template>
