@@ -91,12 +91,12 @@ export default defineComponent({
 
   &:hover {
     transition: all 0.3s ease-in-out;
-    background-color: rgb(34, 37, 45, 0.9);
+    background-color: var(--hover-background);
     border-radius: 5px;
 
     & .card_role {
       transition: all 0.3s ease-in-out;
-      color: $lime-green;
+      color: var(--green);
     }
   }
   display: grid;
@@ -109,7 +109,7 @@ export default defineComponent({
   }
 
   &_header {
-    color: rgb(171, 168, 168, 0.7);
+    color: var(--grey-4);
     font-size: 0.75rem;
     line-height: 1.5rem;
     vertical-align: bottom;
@@ -120,7 +120,7 @@ export default defineComponent({
   }
 
   &_company {
-    color: rgba(185, 184, 184, 0.7);
+    color: var(--grey-1);
   }
 
   &_info {
@@ -134,11 +134,11 @@ export default defineComponent({
   }
   &_link {
     font-weight: 500;
-    color: rgb(153, 153, 153);
+    color: var(--grey-2);
     padding-right: 1rem;
 
     &:hover {
-      color: $lime-green;
+      color: var(--green);
       animation: 0.5s move ease-out;
 
       @keyframes move {
@@ -184,8 +184,8 @@ export default defineComponent({
   &_tech {
     border-radius: 50px;
     padding: 0.25rem 1rem;
-    background-color: rgb(255, 255, 255, 0.2);
-    color: $lime-green;
+    background-color: var(--grey-3);
+    color: var(--green);
   }
 }
 </style>

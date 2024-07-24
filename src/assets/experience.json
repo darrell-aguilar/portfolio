@@ -13,6 +13,13 @@
       "fromDate": "Aug 2021",
       "toDate": "Sep 2022",
       "highlights": "Created a React Dashboard which connects to HP Siteflow API and allows users to view and manage printing devices. This was created to improve on searchability of devices since Siteflow's own dashboard takes a lot of time to navigate due to pagination and was championed by the IT team to manage 200+ devices. Wrote bash and Powershell scripts to automate tasks on Linux and Windows devices used within the Production line"
+    },
+    {
+      "company": "Photobox Group",
+      "role": "IT Support Administrator",
+      "fromDate": "Nov 2018",
+      "toDate": "Aug 2021",
+      "highlights": "Maintenance and administration of AD Environment including security and policies. Creating scripts for automation to improve tasks and software deployment. Managing Windows Servers and Linux workstations used in the factory."
     }
   ]
 }

@@ -19,6 +19,8 @@ import About from "@/components/About.vue"
 import Toggle from "@/components/Toggle.vue"
 import Experience from "@/components/Experience.vue"
 import Projects from "@/components/Projects.vue"
+import { mapState } from "pinia"
+import { useThemeStore } from "./store"
 
 export default defineComponent({
   components: {
@@ -27,6 +29,17 @@ export default defineComponent({
     Toggle,
     Experience,
     Projects,
+  },
+  computed: {
+    ...mapState(useThemeStore, ["currentTheme"]),
+  },
+  watch: {
+    currentTheme: {
+      handler(val) {
+        document.documentElement.setAttribute("data-theme", val)
+      },
+      immediate: true,
+    },
   },
 })
 </script>

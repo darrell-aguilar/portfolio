@@ -63,7 +63,7 @@ export default defineComponent({
   }
 
   &_link {
-    color: $lime-green;
+    color: var(--green);
   }
 
   &_tech {
@@ -76,7 +76,7 @@ export default defineComponent({
 
   &_highlight:hover {
     transition: all 0.5s ease-in-out;
-    color: $lime-green;
+    color: var(--green);
   }
 }
 </style>

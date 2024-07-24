@@ -1,7 +1,12 @@
 <template>
   <div class="toggle">
     <label class="toggle_label" for="check">
-      <input class="toggle_input" type="checkbox" id="check" />
+      <input
+        v-model="selected"
+        class="toggle_input"
+        type="checkbox"
+        id="check"
+      />
       <div class="toggle_switch"></div>
     </label>
     <slot></slot>
@@ -13,6 +18,11 @@ import { defineComponent } from "vue"
 
 export default defineComponent({
   name: "Toggle",
+  data() {
+    return {
+      selected: "",
+    }
+  },
 })
 </script>
 

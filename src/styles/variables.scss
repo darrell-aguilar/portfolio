@@ -29,10 +29,6 @@ $x-large: "1280px";
   }
 }
 
-// colours
-
-$lime-green: #a7ff49;
-
 // mixins
 
 @mixin fade-in-content {
@@ -48,4 +44,47 @@ $lime-green: #a7ff49;
       opacity: 1;
     }
   }
+}
+
+// light theme colours
+$light-theme-text: #212427;
+$light-theme-bg: #f5f5f5;
+$light-theme-green: rgb(21, 163, 21);
+$light-theme-grey-1: rgba(87, 87, 87, 0.7);
+$light-theme-grey-2: rgb(63, 63, 63);
+$light-theme-grey-3: rgba(93, 92, 92, 0.1);
+$light-theme-grey-4: rgb(171, 168, 168, 0.9);
+$light-theme-hover-background: rgba(222, 222, 222, 0.9);
+
+// dark theme colours
+$dark-theme-text: white;
+$dark-theme-bg: rgba(16, 19, 25, 0.4);
+$dark-theme-green: rgb(167, 255, 73);
+$dark-theme-grey-1: rgba(185, 184, 184, 0.7);
+$dark-theme-grey-2: rgb(153, 153, 153);
+$dark-theme-grey-3: rgb(255, 255, 255, 0.2);
+$dark-theme-grey-4: rgb(171, 168, 168, 0.7);
+$dark-theme-hover-background: rgb(34, 37, 45, 0.9);
+
+// colours
+[data-theme="light"] {
+  --text: #{$light-theme-text};
+  --background: #{$light-theme-bg};
+  --green: #{$light-theme-green};
+  --grey-1: #{$light-theme-grey-1};
+  --grey-2: #{$light-theme-grey-2};
+  --grey-3: #{$light-theme-grey-3};
+  --grey-4: #{$light-theme-grey-4};
+  --hover-background: #{$light-theme-hover-background};
+}
+
+[data-theme="dark"] {
+  --text: #{$dark-theme-text};
+  --background: #{$dark-theme-bg};
+  --green: #{$dark-theme-green};
+  --grey-1: #{$dark-theme-grey-1};
+  --grey-2: #{$dark-theme-grey-2};
+  --grey-3: #{$dark-theme-grey-3};
+  --grey-4: #{$dark-theme-grey-4};
+  --hover-background: #{$dark-theme-hover-background};
 }
