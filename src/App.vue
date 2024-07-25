@@ -19,19 +19,25 @@ import About from "@/components/About.vue"
 import Toggle from "@/components/Toggle.vue"
 import Experience from "@/components/Experience.vue"
 import Projects from "@/components/Projects.vue"
-import { mapState } from "pinia"
 import { useThemeStore } from "./store"
+import { computed } from "vue"
 
 export default defineComponent({
+  setup() {
+    const store = useThemeStore()
+
+    const currentTheme = computed(() => store.currentTheme)
+
+    return {
+      currentTheme,
+    }
+  },
   components: {
     Intro,
     About,
     Toggle,
     Experience,
     Projects,
-  },
-  computed: {
-    ...mapState(useThemeStore, ["currentTheme"]),
   },
   watch: {
     currentTheme: {

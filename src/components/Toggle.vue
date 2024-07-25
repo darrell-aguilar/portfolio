@@ -1,5 +1,9 @@
 <template>
-  <div class="toggle">
+  <div
+    class="toggle"
+    :class="{ 'toggle--sticky': sticky, 'toggle--is-light': !isDark }"
+  >
+    {{ currentTheme }}
     <label class="toggle_label" for="check">
       <input
         v-model="selected"
@@ -15,13 +19,38 @@
 
 <script lang="ts">
 import { defineComponent } from "vue"
+import { useThemeStore } from "../store"
+import { Themes } from "../styles/themeHelper"
+import { capitalize } from "../utils/helpers"
 
 export default defineComponent({
   name: "Toggle",
+  props: {
+    sticky: {
+      type: Boolean,
+      default: true,
+    },
+  },
   data() {
     return {
-      selected: "",
+      store: useThemeStore(),
     }
+  },
+  computed: {
+    selected: {
+      get() {
+        return this.store.$state.theme === Themes.Dark
+      },
+      set(val: Themes) {
+        this.store.setTheme(val ? Themes.Dark : Themes.Light)
+      },
+    },
+    currentTheme() {
+      return capitalize(this.store.currentTheme)
+    },
+    isDark() {
+      return this.store.currentTheme === Themes.Dark
+    },
   },
 })
 </script>
@@ -30,6 +59,11 @@ export default defineComponent({
 .toggle {
   display: inline-block;
   vertical-align: middle;
+
+  &--sticky {
+    position: sticky;
+    top: 20px;
+  }
 
   &_input {
     display: none;
@@ -44,6 +78,7 @@ export default defineComponent({
     display: inline-block;
     width: 3.5rem;
     height: 1.5rem;
+    margin-left: 0.25rem;
     vertical-align: middle;
   }
 
@@ -60,13 +95,23 @@ export default defineComponent({
     &::before {
       content: "";
       position: absolute;
-      width: 1.3rem;
-      height: 1.3rem;
+      width: 1.2rem;
+      height: 1.2rem;
       background-color: white;
       left: 0.25rem;
       border-radius: 50%;
-      top: 1px;
+      top: 2px;
       transition: 0.3s;
+    }
+  }
+
+  &--is-light {
+    .toggle_switch {
+      background-color: #a7a7a7;
+
+      &::before {
+        background-color: black;
+      }
     }
   }
 }
