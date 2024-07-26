@@ -1,0 +1,36 @@
+{
+  "projects": [
+    {
+      "image": "images/vuesweeper.png",
+      "title": "VueSweeper",
+      "source_code": "https://github.com/darrell-aguilar/vuesweeper",
+      "url": "https://vuesweeper.vercel.app/",
+      "technologies": ["Vue", "Typescript", "Vuetify", "Pinia"],
+      "info": "A minesweeper game built using Vue, Typescript, Vuetify and Pinia with features to change difficulty and theme."
+    },
+    {
+      "image": "/images/pokemon.png",
+      "title": "Pokemon Database",
+      "source_code": "https://github.com/darrell-aguilar/pokemonDB",
+      "url": "https://pokemon-db-one.vercel.app/",
+      "technologies": ["React", "RTK Query", "Typescript", "React Router"],
+      "info": "A React-Redux project using the PoKemon API and allows the user to view, search and filter PoKemon."
+    },
+    {
+      "image": "/images/Cook-book.png",
+      "title": "Cook Book",
+      "source_code": "https://github.com/darrell-aguilar/Cook-book",
+      "url": "",
+      "technologies": ["React", "NodeJS", "MongoDB", "BootStrap"],
+      "info": "Full stack app using the Spoonacular API. React for the Front End, with Express/NodeJS for the backend with authentication in place. MongoDB used for the Database for storing user credentials, favourites and caching data from API calls."
+    },
+    {
+      "image": "/images/rock-paper-scissors.png",
+      "title": "Rock, Paper, Scissors",
+      "source_code": "https://github.com/darrell-aguilar/rock-paper-scissors",
+      "url": "",
+      "technologies": ["React", "CSS"],
+      "info": "A Rock, Paper, Scissors game built using React."
+    }
+  ]
+}
