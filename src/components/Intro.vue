@@ -6,7 +6,7 @@
           <a href="/">Darrell Aguilar</a>
         </h1>
         <h2 class="intro_subtitle">Full Stack Engineer</h2>
-        <p class="intro_text">Converting design to code.</p>
+        <p class="intro_text">Converting ideas to code.</p>
       </div>
       <div class="intro_links">
         <a
