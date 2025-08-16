@@ -1,6 +1,6 @@
 <template>
   <div class="projects">
-    <h1 class="projects_header">Projects</h1>
+    <h2 class="projects_header">Projects</h2>
     <Card
       v-for="proj in projects"
       :key="proj.title"
@@ -8,7 +8,7 @@
       type="image"
     >
       <div class="projects_image">
-        <img :src="proj.image" />
+        <img :src="proj.image" :alt="proj.image_alt" />
       </div>
       <div class="projects_content">
         <h3 class="projects_title">{{ proj.title }}</h3>
@@ -64,10 +64,8 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .projects {
-  @include fade-in-content;
-
   padding-top: 3rem;
-
+  @include fade-in-content;
   &_header {
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -137,6 +135,7 @@ export default defineComponent({
     padding: 0.25rem 1rem;
     background-color: var(--grey-3);
     color: var(--green);
+    font-weight: 500;
   }
 }
 </style>

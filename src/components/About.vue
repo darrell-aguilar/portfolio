@@ -2,13 +2,15 @@
   <div class="about">
     <h2 class="about_header">About</h2>
     <p class="about_paragraph">
-      A Front End Engineer with experience in converting design and mockups into
-      responsive and highly functional web apps. Experienced in working in a
-      variety of cross-functional teams and delivering cohesive and
-      high-performing applications.
+      A Full Stack Engineer with experience in building end-to-end,
+      product-focused solutions. My expertise lies in implementing and
+      delivering scalable, highly functional applications that meet business
+      objectives. From planning and developing business solutions in a
+      distributed Kotlin microservice environment, to converting design and
+      mock-ups into responsive and highly functional user interface.
     </p>
     <p class="about_paragraph">
-      Currently, I am working as a Front End Engineer building features for
+      Currently, I am working as a Full Stack Engineer building features for
       internal and customer facing web apps at
       <span><a class="about_link" href="https://so.energy">So Energy</a></span
       >. I have experience in using the following tools and technologies in a
@@ -16,18 +18,9 @@
     </p>
     <div class="about_tech">
       <p class="about_paragraph about_highlight">
-        <span class="about_list">Tools and Technologies: </span>Vue, Typescript,
-        Pinia, Vuex, Git, Vuetify, Sass, GraphQL, Hasura, Jest, Cypress,
-        Storybook, Storyblok, Vercel
-      </p>
-      <p class="about_paragraph">
-        On top of these technologies, I also spend my spend time learning about
-        other technologies and have knowledge and personal experience on the
-        following:
-      </p>
-      <p class="about_paragraph about_highlight">
-        <span class="about_list">Other tools and technologies: </span> React,
-        RTK Query, NodeJS, Tailwind
+        <span class="about_list">Tools and Technologies: </span>Vue, Kotlin,
+        Typescript/Javascript, gRPC, GCP, Ktor, Spring, Postgres, Tanstack
+        Query, Tailwind, Git, GraphQL, Hasura, Jest, Cypress, Storybook, Vercel
       </p>
     </div>
   </div>
@@ -43,6 +36,8 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .about {
+  padding-top: 5rem;
+
   @include fade-in-content;
 
   @include sm {
@@ -53,7 +48,6 @@ export default defineComponent({
     padding-top: 1rem;
   }
 
-  padding-top: 5rem;
   &_header {
     font-size: 1.5rem;
   }
@@ -64,6 +58,7 @@ export default defineComponent({
 
   &_link {
     color: var(--green);
+    text-decoration: underline;
   }
 
   &_tech {

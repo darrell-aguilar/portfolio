@@ -1,6 +1,6 @@
 <template>
   <div class="experience">
-    <h1 class="experience_header">Experience</h1>
+    <h2 class="experience_header">Experience</h2>
     <Card
       v-for="exp in experience"
       :key="exp.company"
@@ -15,7 +15,7 @@
       </div>
       <div class="experience_content">
         <h3 class="experience_role">{{ exp.role }}</h3>
-        <h5 class="experience_company">{{ exp.company }}</h5>
+        <h4 class="experience_company">{{ exp.company }}</h4>
         <p class="experience_info">
           {{ exp.highlights }}
         </p>
@@ -44,7 +44,9 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .experience {
-  ::v-deep .card {
+  padding-top: 3rem;
+  @include fade-in-content;
+  :deep(.card) {
     &:hover {
       & .experience_role {
         transition: all 0.3s ease-in-out;
@@ -52,9 +54,6 @@ export default defineComponent({
       }
     }
   }
-  @include fade-in-content;
-
-  padding-top: 3rem;
 
   &_header {
     font-size: 1.5rem;

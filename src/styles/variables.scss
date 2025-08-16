@@ -48,23 +48,23 @@ $x-large: "1280px";
 
 // light theme colours
 $light-theme-text: #212427;
-$light-theme-bg: #fafafa;
-$light-theme-green: rgb(21, 163, 21);
-$light-theme-grey-1: rgba(87, 87, 87, 0.7);
-$light-theme-grey-2: rgb(63, 63, 63);
-$light-theme-grey-3: rgba(93, 92, 92, 0.1);
-$light-theme-grey-4: rgba(80, 80, 80, 0.9);
-$light-theme-hover-background: rgba(222, 222, 222, 0.9);
+$light-theme-bg: #f5f5f5;
+$light-theme-green: #0f610f;
+$light-theme-grey-1: #333333d9;
+$light-theme-grey-2: #3f3f3f;
+$light-theme-grey-3: #5d5c5c1a;
+$light-theme-grey-4: #505050e6;
+$light-theme-hover-background: #dededee6;
 
 // dark theme colours
-$dark-theme-text: white;
-$dark-theme-bg: rgba(16, 19, 25, 0.4);
-$dark-theme-green: rgb(167, 255, 73);
-$dark-theme-grey-1: rgba(185, 184, 184, 0.7);
-$dark-theme-grey-2: rgb(153, 153, 153);
-$dark-theme-grey-3: rgb(255, 255, 255, 0.2);
-$dark-theme-grey-4: rgba(190, 190, 190, 0.7);
-$dark-theme-hover-background: rgb(34, 37, 45, 0.9);
+$dark-theme-text: #ffffff;
+$dark-theme-bg: #101319;
+$dark-theme-green: #a7ff49;
+$dark-theme-grey-1: #b9b8b8b3;
+$dark-theme-grey-2: #999999;
+$dark-theme-grey-3: #ffffff33;
+$dark-theme-grey-4: #bebebeb3;
+$dark-theme-hover-background: #22252de6;
 
 // colours
 [data-theme="light"] {

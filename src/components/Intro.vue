@@ -9,13 +9,19 @@
         <p class="intro_text">Converting design to code.</p>
       </div>
       <div class="intro_links">
-        <a href="https://linkedin.com/in/darrell-aguilar">
+        <a
+          href="https://linkedin.com/in/darrell-aguilar"
+          aria-label="Link to LinkedIn profile"
+        >
           <i class="intro_icon fa-brands fa-linkedin"></i>
         </a>
-        <a href="https://github.com/darrell-aguilar">
+        <a
+          href="https://github.com/darrell-aguilar"
+          aria-label="Link to Github"
+        >
           <i class="intro_icon fa-brands fa-github"></i>
         </a>
-        <a href="mailto:darrell029@gmail.com">
+        <a href="mailto:darrell029@gmail.com" aria-label="Link to email">
           <i class="intro_icon fa-solid fa-envelope"></i>
         </a>
       </div>
@@ -34,11 +40,12 @@ export default defineComponent({
 <style scoped lang="scss">
 .intro {
   &_container {
+    position: static;
+    top: 2rem;
+
     @include lg {
       position: sticky;
     }
-    position: static;
-    top: 2rem;
   }
 
   &_content {

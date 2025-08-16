@@ -8,6 +8,7 @@ export interface ICardProps {
 
 export interface ICardImageProps {
   image: string
+  image_alt: string
   title: string
   source_code: string
   url?: string

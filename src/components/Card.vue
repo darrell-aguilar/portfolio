@@ -16,15 +16,15 @@ export default defineComponent({
 .card {
   padding: 1rem;
   margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
 
   &:hover {
     transition: all 0.3s ease-in-out;
     background-color: var(--hover-background);
     border-radius: 5px;
   }
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.5rem;
 
   @include sm {
     grid-template-columns: 1fr 2fr;
