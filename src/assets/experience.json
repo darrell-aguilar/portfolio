@@ -1,18 +1,25 @@
 {
   "experience": [
     {
+      "company": "Kaluza",
+      "role": "Software Engineer",
+      "fromDate": "Jan 2026",
+      "toDate": "Present",
+      "highlights": "Implemented core backend services in NodeJS for a greenfield MVP, architecting a high-precision billing calculation engine using exact decimal arithmetic to enforce strict financial compliance. Designed modular, reusable core platform APIs, allowing regional client configurations and localized feature variations to be deployed with minimal overhead. Engineered an event-driven S3 ingestion feature for pricing files, decoupling heavy file parsing from main services and improving system throughput for large datasets."
+    },
+    {
       "company": "So Energy",
       "role": "Full Stack Developer",
       "fromDate": "Sep 2022",
-      "toDate": "Present",
-      "highlights": "Delivered a 500% improvement in debt recovery (£200K to £1.2M) by leading the design and implementation of an automated end-to-end collection process. Contributed to both Frontend and Backend, end-to-end developing new features for web applications using Vue.js, TypeScript, and Kotlin across customer-facing and internal back-office platforms. Optimised the Smart Meter Booking Portal to enhance user experience, resulting in an increase in conversion rates."
+      "toDate": "Jan 2026",
+      "highlights": "Drove the design and implementation of an automated multi-step collection debt allocation and collection process that recovered £2M+ in debt while reducing manual processing overhead by 85%. Contributed to both frontend and backend, developing new features end-to-end for web applications using Vue.js, TypeScript, and Kotlin across customer-facing and internal back-office platforms. Optimised the booking portal for smart meter install to enhance user experience, resulting in better conversion rates."
     },
     {
       "company": "Precision Proco",
-      "role": "IT Administrator",
+      "role": "IT Support Specialist",
       "fromDate": "Aug 2021",
       "toDate": "Sep 2022",
-      "highlights": "Created a React Dashboard which connects to HP Siteflow API and allows users to view and manage printing devices. This was created to improve on searchability of devices since Siteflow's own dashboard takes a lot of time to navigate due to pagination and was championed by the IT team to manage 200+ devices. Wrote bash and Powershell scripts to automate tasks on Linux and Windows devices used within the Production line"
+      "highlights": "Developed a React web application with an Express backend, integrating the HP Siteflow API to enable users to view and manage over 200 printing devices. This solution improved productivity by providing enhanced visibility and simplifying troubleshooting processes."
     },
     {
       "company": "Photobox Group",

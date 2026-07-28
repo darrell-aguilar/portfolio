@@ -43,6 +43,8 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+@use "@/styles/variables.scss" as *;
+
 .experience {
   padding-top: 3rem;
   @include fade-in-content;

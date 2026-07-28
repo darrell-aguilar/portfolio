@@ -79,15 +79,23 @@ export default defineComponent({
   &_links {
     margin: 1.5rem 0;
     display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 
   &_link {
     font-weight: 500;
-    color: var(--grey-2);
-    padding-right: 1rem;
+    color: var(--green);
+    padding: 0.5rem 1.25rem;
+    border: 2px solid var(--green);
+    border-radius: 50px;
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+    display: inline-block;
 
     &:hover {
-      color: var(--green);
+      background-color: var(--green);
+      color: var(--background);
       animation: 0.5s move ease-out;
 
       @keyframes move {
@@ -136,6 +144,13 @@ export default defineComponent({
     background-color: var(--grey-3);
     color: var(--green);
     font-weight: 500;
+    transition: all 0.3s ease-out;
+    border: 1px solid transparent;
+
+    &:hover {
+      border-color: var(--green);
+      background-color: var(--hover-background);
+    }
   }
 }
 </style>

@@ -50,7 +50,13 @@ export default defineComponent({
 })
 </script>
 
+<style lang="scss">
+@use "@/styles/variables.scss" as *;
+</style>
+
 <style scoped lang="scss">
+@use "@/styles/variables.scss" as *;
+
 .app {
   &_toggle {
     position: absolute;

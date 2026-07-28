@@ -6,7 +6,7 @@
           <a href="/">Darrell Aguilar</a>
         </h1>
         <h2 class="intro_subtitle">Full Stack Engineer</h2>
-        <p class="intro_text">Converting ideas to code.</p>
+        <p class="intro_text">Delivering business solutions with code.</p>
       </div>
       <div class="intro_links">
         <a
@@ -38,6 +38,8 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+@use "@/styles/variables.scss" as *;
+
 .intro {
   &_container {
     position: static;
@@ -50,7 +52,6 @@ export default defineComponent({
 
   &_content {
     animation: fade-in 0.5s ease-in-out;
-
     @keyframes fade-in {
       0% {
         opacity: 0;
@@ -87,9 +88,11 @@ export default defineComponent({
     @keyframes slide-in {
       from {
         left: -50rem;
+        opacity: 0; 
       }
       to {
         left: 0;
+        opacity: 1;
       }
     }
 

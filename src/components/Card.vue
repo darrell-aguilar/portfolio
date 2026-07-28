@@ -13,6 +13,8 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+@use "@/styles/variables.scss" as *;
+
 .card {
   padding: 1rem;
   margin-bottom: 1rem;
