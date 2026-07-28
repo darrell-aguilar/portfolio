@@ -16,9 +16,11 @@
       <div class="experience_content">
         <h3 class="experience_role">{{ exp.role }}</h3>
         <h4 class="experience_company">{{ exp.company }}</h4>
-        <p class="experience_info">
-          {{ exp.highlights }}
-        </p>
+        <ul class="experience_highlights">
+          <li v-for="(highlight, index) in exp.highlights" :key="index">
+            {{ highlight }}
+          </li>
+        </ul>
       </div>
     </Card>
   </div>
@@ -77,9 +79,16 @@ export default defineComponent({
     color: var(--grey-1);
   }
 
-  &_info {
+  &_highlights {
     padding-top: 1.5rem;
+    padding-left: 1.5rem;
     font-size: 0.9rem;
+    list-style: disc;
+
+    & li {
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+    }
   }
 }
 </style>
