@@ -6,7 +6,6 @@
       <div>
         <About />
         <Experience />
-        <Projects />
       </div>
     </div>
   </div>
@@ -18,7 +17,6 @@ import Intro from "@/components/Intro.vue"
 import About from "@/components/About.vue"
 import Toggle from "@/components/Toggle.vue"
 import Experience from "@/components/Experience.vue"
-import Projects from "@/components/Projects.vue"
 import { useThemeStore } from "./store"
 import { computed } from "vue"
 
@@ -37,7 +35,6 @@ export default defineComponent({
     About,
     Toggle,
     Experience,
-    Projects,
   },
   watch: {
     currentTheme: {
