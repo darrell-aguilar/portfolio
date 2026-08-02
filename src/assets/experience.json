@@ -6,10 +6,11 @@
       "fromDate": "Jan 2026",
       "toDate": "Present",
       "highlights": [
-        "Implemented core backend services in NodeJS for a greenfield MVP, architecting a high-precision billing calculation engine using exact decimal arithmetic to enforce strict financial compliance.",
-        "Designed modular, reusable core platform APIs, allowing regional client configurations and localized feature variations to be deployed with minimal overhead.",
+        "Built the core Node.js backend services for a greenfield MVP, including a billing engine that used exact decimal arithmetic to preserve precision in financial calculations.",
+        "Conceptualised and built a reusable energy usage and cost package, integrating third-party APIs and establishing defined clean contracts to enable rapid rollout across multiple clients.",
+        "Designed shared platform APIs that supported regional and/or client configuration, allowing client-specific features to be added and allowing quick reusability.",
         "Engineered an event-driven S3 ingestion feature for pricing files, decoupling heavy file parsing from main services and improving system throughput for large datasets.",
-        "Adapted AI workflow, using tools such as Claude and Copilot on top of pair programming, increasing delivery time of new features by 25%."
+        "Adapted AI workflow, using tools such as Claude and Copilot on top of pair programming, accelerating delivery time of new features by 25%."
       ]
     },
     {
@@ -20,7 +21,8 @@
       "highlights": [
         "Drove the design and implementation of an automated multi-step collection debt allocation and collection process that recovered £2M+ in debt while reducing manual processing overhead by 85%.",
         "Contributed to both frontend and backend, developing new features end-to-end for web applications using Vue.js, TypeScript, and Kotlin across customer-facing and internal back-office platforms.",
-        "Optimised the booking portal for smart meter install to enhance user experience, resulting in better conversion rates."
+        "Optimised the booking portal for smart meter install to enhance user experience, resulting in better conversion rates.",
+        "Redesigned and rebuilt the backoffice frontend from scratch to improve app performance and simplify administrative workflows."
       ]
     },
     {
