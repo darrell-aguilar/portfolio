@@ -1,28 +1,30 @@
 <template>
   <div class="experience">
     <h2 class="experience_header">Experience</h2>
-    <Card
-      v-for="exp in experience"
-      :key="exp.company"
-      :content="exp"
-      type="card"
-    >
-      <div class="experience_subheader">
-        <p>
-          {{ exp.fromDate.toUpperCase() }} -
-          {{ exp.toDate.toUpperCase() }}
-        </p>
-      </div>
-      <div class="experience_content">
-        <h3 class="experience_role">{{ exp.role }}</h3>
-        <h4 class="experience_company">{{ exp.company }}</h4>
-        <ul class="experience_highlights">
-          <li v-for="(highlight, index) in exp.highlights" :key="index">
-            {{ highlight }}
-          </li>
-        </ul>
-      </div>
-    </Card>
+    <div class="experience_cards">
+      <Card
+        v-for="exp in experience"
+        :key="exp.company"
+        :content="exp"
+        type="card"
+      >
+        <div class="experience_subheader">
+          <p>
+            {{ exp.fromDate.toUpperCase() }} -
+            {{ exp.toDate.toUpperCase() }}
+          </p>
+        </div>
+        <div class="experience_content">
+          <h3 class="experience_role">{{ exp.role }}</h3>
+          <h4 class="experience_company">{{ exp.company }}</h4>
+          <ul class="experience_highlights">
+            <li v-for="(highlight, index) in exp.highlights" :key="index">
+              {{ highlight }}
+            </li>
+          </ul>
+        </div>
+      </Card>
+    </div>
   </div>
 </template>
 
@@ -48,12 +50,11 @@ export default defineComponent({
 @use "@/styles/variables.scss" as *;
 
 .experience {
-  padding-top: 3rem;
+  padding-top: 2.5rem;
   @include fade-in-content;
   :deep(.card) {
     &:hover {
       & .experience_role {
-        transition: all 0.3s ease-in-out;
         color: var(--green);
       }
     }
@@ -64,23 +65,31 @@ export default defineComponent({
     margin-bottom: 1rem;
   }
 
+  &_cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
   &_subheader {
     color: var(--grey-4);
     font-size: 0.75rem;
     line-height: 1.5rem;
     vertical-align: bottom;
+    letter-spacing: 0.1em;
   }
 
   &_role {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   &_company {
     color: var(--grey-1);
+    margin-top: 0.15rem;
   }
 
   &_highlights {
-    padding-top: 1.5rem;
+    padding-top: 1.25rem;
     padding-left: 1.5rem;
     font-size: 0.9rem;
     list-style: disc;

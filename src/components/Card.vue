@@ -16,21 +16,29 @@ export default defineComponent({
 @use "@/styles/variables.scss" as *;
 
 .card {
-  padding: 1rem;
-  margin-bottom: 1rem;
+  padding: 1.15rem 1rem;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.5rem;
+  gap: 1rem;
+  border: 1px solid color-mix(in srgb, var(--grey-3) 92%, var(--text));
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--background) 96%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--grey-3) 25%, transparent);
+  transition:
+    border-color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
 
   &:hover {
-    transition: all 0.3s ease-in-out;
-    background-color: var(--hover-background);
-    border-radius: 5px;
+    border-color: color-mix(in srgb, var(--green) 45%, var(--grey-3));
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--green) 18%, transparent);
+    background-color: color-mix(in srgb, var(--background) 94%, var(--green));
   }
 
   @include sm {
     grid-template-columns: 1fr 2fr;
     gap: 2rem;
+    padding: 1.4rem 1.25rem;
   }
 }
 </style>

@@ -66,23 +66,27 @@ export default defineComponent({
     }
   }
   &_container {
-    padding: 2rem 1rem;
+    padding: 3rem 1rem 4rem;
     margin: auto;
-    max-width: 1200px;
+    max-width: 1240px;
     display: flex;
     flex-direction: column;
+    gap: 2.75rem;
 
     & > * {
       flex-basis: 50%;
     }
 
     @include sm {
-      padding: 2rem 4rem;
+      padding: 4rem 2rem 4.5rem;
+      gap: 3rem;
     }
 
     @include lg {
       flex-direction: row;
-      padding: 4rem 4rem;
+      align-items: flex-start;
+      padding: 5.5rem 4rem 5.5rem;
+      gap: 5.5rem;
     }
   }
 }
